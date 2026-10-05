@@ -1,4 +1,3 @@
-@"
 # Python
 __pycache__/
 *.py[cod]
@@ -16,6 +15,7 @@ data/projects/
 data/archive/
 data/generated/
 data/inbox/
+*.corrupt.*.bak
 workspace/temporary/
 workspace/processing/
 
@@ -36,5 +36,3 @@ backups/
 .idea/
 .DS_Store
 Thumbs.db
-"@ | Set-Content .gitignore
-data/

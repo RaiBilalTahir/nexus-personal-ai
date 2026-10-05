@@ -1,4 +1,5 @@
 from .source_identity import (
+    CorruptedLedgerError,
     DuplicateClassification,
     ProcessingRecordStore,
     SourceIdentity,
@@ -9,6 +10,7 @@ from .source_identity import (
 )
 
 __all__ = [
+    "CorruptedLedgerError",
     "DuplicateClassification",
     "ProcessingRecordStore",
     "SourceIdentity",

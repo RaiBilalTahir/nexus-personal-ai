@@ -54,7 +54,6 @@ class ModelGateway:
 def create_gateway(config, environ=None):
     from .providers.gemini import GeminiProvider
 
-    environment = os.environ if environ is None else environ
     ai_config = config.get("ai", {})
     provider_name = ai_config.get("provider", "gemini")
     model_name = ai_config.get("model", "gemini-3.8-flash")
@@ -62,7 +61,8 @@ def create_gateway(config, environ=None):
     providers = {
         "gemini": GeminiProvider(
             model=model_name,
-            api_key=environment.get("GEMINI_API_KEY"),
+            environ=environ,
+            api_key=environ.get("GEMINI_API_KEY") if environ is not None else None,
         )
     }
 

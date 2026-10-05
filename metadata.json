@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Personal AI",
+  "description": "Personal AI operating layer and control center for academic note processing, feature orchestration, and course knowledge management.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

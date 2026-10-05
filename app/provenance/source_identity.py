@@ -3,6 +3,7 @@ import json
 import mimetypes
 import os
 import tempfile
+import time
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from enum import Enum
@@ -11,6 +12,10 @@ from typing import Any, Iterable
 
 
 class SourceIdentityError(ValueError):
+    pass
+
+
+class CorruptedLedgerError(RuntimeError):
     pass
 
 
@@ -60,12 +65,40 @@ class ProcessingRecordStore:
             return []
 
         try:
-            value = json.loads(self.path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            return []
+            raw_text = self.path.read_text(encoding="utf-8")
+        except OSError as error:
+            raise CorruptedLedgerError(
+                f"Unable to read processing ledger at {self.path}: {error}"
+            ) from error
 
-        records = value.get("records", []) if isinstance(value, dict) else []
-        return records if isinstance(records, list) else []
+        try:
+            value = json.loads(raw_text)
+        except json.JSONDecodeError as error:
+            # Preserve the corrupt evidence with a timestamped backup file
+            backup_path = self.path.with_name(
+                f"{self.path.stem}.corrupt.{int(time.time())}{self.path.suffix}.bak"
+            )
+            try:
+                backup_path.write_text(raw_text, encoding="utf-8")
+            except OSError:
+                pass
+            raise CorruptedLedgerError(
+                f"Processing ledger at {self.path} is corrupted and cannot be parsed as JSON: {error}. "
+                f"Original corrupted data preserved at {backup_path}."
+            ) from error
+
+        if not isinstance(value, dict) or "records" not in value:
+            raise CorruptedLedgerError(
+                f"Processing ledger at {self.path} has invalid format: expected dict with 'records' key."
+            )
+
+        records = value.get("records", [])
+        if not isinstance(records, list):
+            raise CorruptedLedgerError(
+                f"Processing ledger at {self.path} has invalid format: 'records' must be a list."
+            )
+
+        return records
 
     def _save_records(self, records):
         self.path.parent.mkdir(parents=True, exist_ok=True)

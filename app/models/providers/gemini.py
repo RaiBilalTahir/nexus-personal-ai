@@ -4,7 +4,10 @@ import os
 import time
 from typing import Any
 
-from google import genai
+try:
+    from google import genai
+except ImportError:
+    genai = None
 
 from ..contracts import (
     ErrorCategory,
@@ -17,12 +20,17 @@ from ..contracts import (
 class GeminiProvider:
     provider_name = "gemini"
 
-    def __init__(self, model="gemini-3.8-flash", api_key=None, client=None):
+    def __init__(self, model="gemini-3.8-flash", api_key=None, client=None, environ=None):
         self.model = model
-        self._api_key = (
-            api_key if api_key is not None else os.environ.get("GEMINI_API_KEY")
-        )
         self._client = client
+
+        if environ is not None:
+            # Explicit isolated environment supplied - do not fall back to os.environ
+            self._api_key = environ.get("GEMINI_API_KEY")
+        elif api_key is not None:
+            self._api_key = api_key
+        else:
+            self._api_key = os.environ.get("GEMINI_API_KEY")
 
     def generate(self, request: ModelRequest) -> ModelResult:
         model = request.model or self.model
@@ -36,6 +44,18 @@ class GeminiProvider:
                     category=ErrorCategory.MISSING_CREDENTIALS,
                     retryable=False,
                     detail="GEMINI_API_KEY",
+                ),
+                latency_ms=self._elapsed_ms(started_at),
+            )
+
+        if self._client is None and genai is None:
+            return ModelResult.failure(
+                provider=self.provider_name,
+                model=model,
+                error=ModelError(
+                    category=ErrorCategory.PROVIDER_UNAVAILABLE,
+                    retryable=False,
+                    detail="google_genai_sdk_not_installed",
                 ),
                 latency_ms=self._elapsed_ms(started_at),
             )

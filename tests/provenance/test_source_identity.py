@@ -1,13 +1,15 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
 
 from app.provenance.source_identity import (
+    CorruptedLedgerError,
     DuplicateClassification,
     ProcessingRecordStore,
-    classify_source,
     calculate_processing_config_id,
     calculate_source_identity,
+    classify_source,
 )
 
 
@@ -62,7 +64,7 @@ class SourceIdentityTests(unittest.TestCase):
 
         self.assertEqual(result.classification, DuplicateClassification.MODIFIED_VERSION)
 
-    def test_possible_duplicate_is_reviewable(self):
+    def test_possible_duplicate_is_classified_without_blocking(self):
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory) / "one.jpg"
             possible = Path(directory) / "two.jpg"
@@ -116,6 +118,53 @@ class SourceIdentityTests(unittest.TestCase):
             result.classification,
             DuplicateClassification.INVALID_UNREADABLE,
         )
+
+    def test_corrupted_ledger_raises_error_and_creates_backup(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ledger_path = Path(directory) / "records.json"
+            ledger_path.write_text("{this is corrupted json", encoding="utf-8")
+
+            store = ProcessingRecordStore(ledger_path)
+            with self.assertRaises(CorruptedLedgerError):
+                store.find_record("any-hash", "config-a")
+
+            # Verify that a backup file was created preserving corrupt data
+            bak_files = list(Path(directory).glob("*.bak"))
+            self.assertGreaterEqual(len(bak_files), 1)
+            self.assertEqual(bak_files[0].read_text(encoding="utf-8"), "{this is corrupted json")
+
+    def test_malformed_ledger_without_records_key_raises_error(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ledger_path = Path(directory) / "records.json"
+            ledger_path.write_text(json.dumps({"version": 1}), encoding="utf-8")
+
+            store = ProcessingRecordStore(ledger_path)
+            with self.assertRaises(CorruptedLedgerError):
+                store.find_record("any-hash", "config-a")
+
+    def test_ledger_append_preserves_historical_records(self):
+        with tempfile.TemporaryDirectory() as directory:
+            ledger_path = Path(directory) / "records.json"
+            store = ProcessingRecordStore(ledger_path)
+
+            source1 = Path(directory) / "file1.txt"
+            source2 = Path(directory) / "file2.txt"
+            source1.write_bytes(b"first record")
+            source2.write_bytes(b"second record")
+
+            id1 = calculate_source_identity(source1)
+            id2 = calculate_source_identity(source2)
+
+            store.record(id1, "config-a", "completed", output_path="out1.md")
+            store.record(id2, "config-a", "completed", output_path="out2.md")
+
+            self.assertTrue(store.is_completed(id1, "config-a"))
+            self.assertTrue(store.is_completed(id2, "config-a"))
+
+            loaded = json.loads(ledger_path.read_text(encoding="utf-8"))
+            self.assertEqual(len(loaded["records"]), 2)
+            self.assertEqual(loaded["records"][0]["source"]["content_hash"], id1.content_hash)
+            self.assertEqual(loaded["records"][1]["source"]["content_hash"], id2.content_hash)
 
 
 if __name__ == "__main__":
