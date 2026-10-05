@@ -1,0 +1,40 @@
+@"
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Runtime / local data
+logs/
+data/memory/
+data/tasks/
+data/projects/
+data/archive/
+data/generated/
+data/inbox/
+workspace/temporary/
+workspace/processing/
+
+# Backups
+backups/
+
+# Temporary sync files
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# Secrets / environment files
+.env
+.env.*
+!.env.example
+
+# Local IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+"@ | Set-Content .gitignore
+data/
