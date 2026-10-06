@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
+import { createServer as createHttpServer } from 'node:http';
 import multer from 'multer';
 import dotenv from 'dotenv';
 
@@ -333,14 +334,16 @@ app.get('/api/logs', (_req, res) => {
 // ================= VITE DEV SERVER INTEGRATION =================
 
 async function startServer() {
+  const httpServer = createHttpServer(app);
+
   if (process.env.NODE_ENV !== 'production') {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: {
         middlewareMode: true,
-        // Express owns the HTTP server, so Vite cannot attach its HMR WebSocket.
-        // Disable the client connection to avoid repeated "closed without opened" errors.
-        hmr: false,
+        hmr: {
+          server: httpServer,
+        },
       },
       appType: 'spa',
     });
@@ -352,7 +355,7 @@ async function startServer() {
     });
   }
 
-  app.listen(PORT, HOST, () => {
+  httpServer.listen(PORT, HOST, () => {
     console.log(`[NEXUS] Control Center server listening at http://${HOST}:${PORT}`);
   });
 }
