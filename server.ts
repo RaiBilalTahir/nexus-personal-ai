@@ -344,6 +344,7 @@ async function startServer() {
         // The hosted preview proxies HTTP but does not keep Vite's HMR socket
         // open, which causes the injected client to report a closed WebSocket.
         hmr: false,
+  ws: false,
       },
       appType: 'spa',
     });

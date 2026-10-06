@@ -11,7 +11,7 @@ export default defineConfig({
       transformIndexHtml: {
         order: 'post',
         handler(html) {
-          return html.replace(/<script[^>]+src=["']\/@vite\/client["'][^>]*><\/script>/g, '');
+          return html.replace(/<script\b[^>]*\bsrc=["'][^"']*\/@vite\/client[^"']*["'][^>]*><\/script>/gi, '');
         },
       },
     },
