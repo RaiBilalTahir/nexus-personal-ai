@@ -1,0 +1,1354 @@
+NEXUS — MASTER IDEA VAULT
+========================================
+Purpose:
+A complete inventory of Nexus ideas, concepts, capabilities, design directions,
+principles, and future possibilities collected so far.
+
+IMPORTANT:
+- This is an IDEA VAULT, not the implementation roadmap.
+- Nothing here is automatically approved, required, or currently implemented.
+- Ideas are intentionally preserved so we do not lose ambitious possibilities.
+- Later, each idea can be classified as: BUILD NOW / BUILD LATER / EXPERIMENT /
+  OPTIONAL / EXTERNAL TOOL / CUT.
+- "User Ideas" are the original ideas/features raised by Rai.
+- "Our Evolved Ideas" are concepts synthesized, refined, or expanded during
+  later architecture/product discussions.
+- Claude's useful additions are included inside the synthesized section where
+  they materially improved the Nexus concept.
+
+============================================================
+PART I — USER'S ORIGINAL NEXUS IDEAS
+============================================================
+
+A. CORE VISION / IDENTITY
+-------------------------
+1. Build a personal AI inspired by JARVIS.
+2. JARVIS / FRIDAY-style ambition.
+3. ULTRON-style breadth/system awareness as inspiration (not evil behavior).
+4. Build the "best possible" personal AI for one person.
+5. AI that can eventually do "anything and everything" that is realistically
+   digitally useful.
+6. Nexus should be a personal AI, not merely a chatbot.
+7. Nexus should become a second mind.
+8. Nexus should understand the user's world, not just isolated prompts.
+9. Nexus should be highly capable, expandable, and future-proof.
+10. Nexus should become more useful over time.
+11. Nexus should be private/personal and primarily accessible to the user.
+12. User wants maximum practical capability rather than a narrow AI niche.
+
+B. VOICE / SPEECH
+-----------------
+13. Voice assistant.
+14. Voice control.
+15. Speech-to-text (STT).
+16. Text-to-speech (TTS).
+17. Natural voice conversation.
+18. Talk-back / spoken responses.
+19. Interruption handling / barge-in.
+20. Wake-word or push-to-talk interaction.
+21. Voice should feel conversational rather than command-only.
+22. Nexus should recognize who is speaking.
+23. Different people can be recognized by voice.
+24. Speaker identity can influence personalization/permissions.
+25. Voice should eventually feel like JARVIS/FRIDAY.
+26. Nexus can call/report to the user through a phone/communication channel.
+27. Nexus may eventually call the user via WhatsApp on iPhone to report something.
+28. Support the user's two-SIM setup where relevant.
+29. Potentially use phone/mobile identity and communication state.
+
+C. SCREEN / VISION / PERCEPTION
+-------------------------------
+30. Screen guidance.
+31. Screen understanding.
+32. Screenshot analysis.
+33. Vision for images.
+34. Handwritten note understanding.
+35. Camera understanding.
+36. Camera-based perception.
+37. Event-based screen awareness.
+38. Future continuous/contextual perception where safe.
+39. Hand gesture control.
+40. Hand tracking.
+41. Face recognition.
+42. Recognize a person from an approved image/profile.
+43. Use face recognition for convenience/personalization.
+44. Potentially use approved visual identity sources.
+45. Visual understanding of apps, windows, controls, and UI.
+46. Vision-assisted PC interaction.
+
+D. PC / COMPUTER CONTROL
+-------------------------
+47. PC control.
+48. Open applications.
+49. Close applications.
+50. Navigate windows/apps.
+51. Read the screen.
+52. Control mouse/keyboard through structured actions.
+53. File management.
+54. Create files.
+55. Move files.
+56. Organize folders.
+57. Search files.
+58. Duplicate detection.
+59. Version detection.
+60. Application automation.
+61. System guidance.
+62. Safe/controlled PC operations.
+63. Visual feedback during PC operations.
+64. Verification after PC actions.
+65. Recovery after failed PC actions.
+66. Avoid unrestricted shell access as the default.
+67. Eventually support broad computer operation through controlled tools.
+
+E. BROWSER / WEB
+----------------
+68. Access the web.
+69. Web research.
+70. Browser control.
+71. Search websites.
+72. Read webpages.
+73. Fill forms.
+74. Navigate web portals.
+75. Interact with online services.
+76. Use university portals.
+77. Use web apps.
+78. Potentially automate repetitive browser workflows.
+79. Web-based bookings.
+80. Reservations.
+81. Appointment booking.
+82. Service interactions.
+83. "Access everything from the web and be best" as a long-term ambition.
+84. Use external web tools/services when better than rebuilding them.
+
+F. MOBILE / PHONE
+-----------------
+85. Mobile control.
+86. Work with the user's iPhone.
+87. Cross-device continuity.
+88. Send notifications to phone.
+89. Call/message/report to phone.
+90. Use phone as an interface to Nexus.
+91. Capture information from phone into Nexus.
+92. Potentially use both SIMs appropriately.
+93. Future iPhone integration.
+94. Mobile status/context.
+95. Mobile as a remote control/interface for Nexus.
+
+G. WHATSAPP / COMMUNICATIONS
+-----------------------------
+96. WhatsApp assistant.
+97. Use WhatsApp from laptop where allowed.
+98. Give an approved WhatsApp account to Nexus for controlled use.
+99. Call people on WhatsApp.
+100. Message people on WhatsApp.
+101. Send reports to user on WhatsApp.
+102. Receive information through WhatsApp.
+103. Draft WhatsApp messages.
+104. Send messages under permission rules.
+105. Manage communication context/history where appropriate.
+
+H. EMAIL
+--------
+106. Email assistant.
+107. Read/summarize emails.
+108. Draft emails.
+109. Reply drafting.
+110. Send emails under approval.
+111. Send emails to professors.
+112. Track email-related tasks.
+113. Prepare professional communication.
+114. Understand relevant communication context.
+
+I. CALENDAR / SCHEDULING
+------------------------
+115. Calendar assistant.
+116. Manage calendar.
+117. Add events.
+118. Modify events.
+119. Reminders.
+120. Deadline tracking.
+121. Appointment booking.
+122. Reservation management.
+123. Schedule planning.
+124. Detect schedule conflicts.
+125. Suggest better schedules.
+126. Recurring schedule/workflow awareness.
+
+J. HOME CONTROL
+---------------
+127. Home control.
+128. Smart-device control.
+129. Home automation.
+130. Device state awareness.
+131. Future smart-home integrations.
+132. Safety/permission checks for home actions.
+
+K. GAMING
+---------
+133. Gaming assistant.
+134. Game guidance.
+135. Gameplay help.
+136. Gaming-related PC assistance.
+137. Game setup assistance.
+138. Performance guidance.
+139. Future gaming workflows.
+
+L. GRAPHICS / CREATIVE
+----------------------
+140. Graphics assistant.
+141. Image-related workflows.
+142. Design assistance.
+143. Creative generation.
+144. Video editing assistant.
+145. Video workflow support.
+146. Media organization.
+147. Future creative tool integration.
+148. Image generation/editing as a Nexus capability.
+
+M. ACADEMIC / NOTES
+-------------------
+149. Notes reader.
+150. Register photo processing.
+151. Handwritten notes transcription.
+152. Course recognition from filenames/content.
+153. Academic knowledge organization.
+154. Searchable course material.
+155. Source-linked notes.
+156. Exam/study assistance.
+157. Assignment support.
+158. Course-specific context.
+159. Quiz generation.
+160. Revision assistance.
+161. Study planning.
+162. Academic deadlines.
+163. Research support.
+164. Citations and source references.
+
+N. TASKS / PRODUCTIVITY
+-----------------------
+165. Task management.
+166. Goal management.
+167. Project management.
+168. Reminders.
+169. Deadlines.
+170. Planning.
+171. Prioritization.
+172. Recurring workflows.
+173. Dependencies.
+174. Progress tracking.
+175. Next-action suggestions.
+176. Task recovery.
+177. Task verification.
+178. Unfinished-task detection.
+
+O. SUGGESTIONS / PROACTIVITY
+----------------------------
+179. Show suggestions on screen for almost everything.
+180. Suggest next actions.
+181. Detect missing steps.
+182. Detect duplicated work.
+183. Detect conflicts.
+184. Detect stale information.
+185. Detect unfinished work.
+186. Suggest workflow improvements.
+187. Proactive reports.
+188. Proactive reminders.
+189. Proactive warnings.
+190. User-requested watches/monitoring.
+191. Quiet-hour behavior.
+192. Notification controls.
+
+P. PERSONALIZATION / LEARNING
+-----------------------------
+193. Get better as time passes.
+194. Learn from user corrections.
+195. Learn from user mistakes.
+196. Learn from Nexus mistakes.
+197. Learn user preferences.
+198. Learn recurring workflows.
+199. Learn project context.
+200. Learn communication preferences.
+201. Learn what the user likes/dislikes.
+202. Adapt behavior over time.
+203. Avoid repeating mistakes.
+204. Remember important context.
+205. User-specific personalization.
+206. Long-term continuity.
+
+Q. ACCESS / GENERAL PURPOSE
+---------------------------
+207. Broad web access.
+208. Broad digital access.
+209. General-purpose personal AI.
+210. One place for many digital capabilities.
+211. Cross-domain context.
+212. Cross-application workflows.
+213. Cross-device workflows.
+214. One personal assistant across many surfaces.
+215. Future expansion to new technologies/devices.
+
+============================================================
+PART II — USER'S CORE IDEAS / PHILOSOPHY
+============================================================
+
+1. Nexus should be as capable as realistically possible.
+2. User wants broad capability rather than a narrow niche.
+3. Nexus should become better over time.
+4. Nexus should understand context rather than treating every request independently.
+5. Nexus should remember what matters.
+6. Nexus should reduce human mistakes.
+7. Nexus should reduce AI mistakes.
+8. Nexus should avoid duplicates.
+9. Nexus should verify actions.
+10. Nexus should not claim success without evidence.
+11. Nexus should be private/personal.
+12. Nexus should remain under the user's control.
+13. User wants ambitious long-term capability without pretending science fiction is
+    already possible.
+14. User wants AI-assisted development and iterative building.
+15. User wants AI tools to challenge each other instead of simply saying "good".
+16. User wants the best version, even if it requires changing earlier ideas.
+17. User wants to preserve useful work rather than endlessly restart.
+18. User wants $0 baseline usefulness with optional paid upgrades.
+19. User wants to eventually have a polished JARVIS-like experience.
+20. User wants all major ideas preserved so they are not forgotten during
+    implementation.
+
+============================================================
+PART III — OUR EVOLVED / SYNTHESIZED NEXUS CONCEPTS
+============================================================
+
+A. CORE DEFINITION
+------------------
+1. Nexus as a "Personal Intelligence System".
+2. Nexus as a "Personal Context-and-Action System".
+3. Nexus as a "Personal Intelligence + Orchestration System".
+4. Final evolved direction:
+   Nexus should understand the user's context, coordinate capabilities/tools,
+   remember appropriately, verify outcomes, reduce mistakes, and help the user
+   act across digital life while keeping the user in control.
+5. "Second mind" remains a product metaphor rather than a literal architecture.
+6. JARVIS/FRIDAY/ULTRON are experience inspirations, not engineering specs.
+7. Nexus should be broader than any one capability.
+8. Nexus should not try to be the world's best specialist at everything.
+9. Nexus should be the layer that can orchestrate the best specialist tools/providers.
+
+B. PERSONAL CONTEXT
+-------------------
+10. Personal context should be a core differentiator.
+11. Understand projects, files, tasks, goals, decisions, preferences, people,
+    relationships, deadlines, previous actions, and relevant history.
+12. Context should be structured enough to reuse but not an enormous graph unless
+    the value justifies it.
+13. Context should be portable across AI providers.
+14. Context should be scoped by project/task/session where useful.
+15. Context should include constraints and user preferences.
+16. Context should be able to distinguish current vs stale information.
+
+C. BRIEFING DESK / CONTEXT BROKER
+---------------------------------
+17. Use a "brief" before asking a model/tool to act.
+18. A brief can contain:
+    - user request
+    - relevant file excerpts
+    - source/page references
+    - user preferences
+    - past decisions
+    - task/project constraints
+    - previous relevant results
+19. Models/providers can consume the same portable brief.
+20. After an action, a "debrief" can record:
+    - what was asked
+    - what happened
+    - what was accepted/rejected
+    - evidence/results
+21. Brief/debrief can become a provider-independent layer.
+22. The goal is to stop re-explaining the user's world to every AI.
+
+D. "TRUSTED STATE WITH RECEIPTS"
+-------------------------------
+23. Nexus should know what exists.
+24. Nexus should know where it came from.
+25. Nexus should know its version.
+26. Nexus should know whether it was processed.
+27. Nexus should know whether an action actually succeeded.
+28. Nexus should preserve evidence/receipts.
+29. Important actions should produce an action receipt:
+    - intended action
+    - actual action
+    - expected result
+    - verified result
+    - source/evidence
+30. Generic AI can answer; Nexus should additionally maintain trusted state.
+
+E. HUMAN-ERROR REDUCTION
+------------------------
+31. Human-error reduction is a major product principle.
+32. Detect duplicates.
+33. Detect version conflicts.
+34. Detect stale information.
+35. Detect contradictory deadlines.
+36. Detect wrong destinations.
+37. Detect missing requirements.
+38. Detect incomplete tasks.
+39. Detect repeated user mistakes.
+40. Detect repeated Nexus mistakes.
+41. Detect tool-success vs real-task failure.
+42. Detect accidental destructive actions.
+43. Detect duplicate reminders/tasks/notes.
+44. Use deterministic checks wherever possible.
+45. Do not promise "AI error elimination"; only detect/verify what is actually
+    checkable.
+46. Record false positives and false alarms to improve the system.
+
+F. CORE OPERATING LOOP
+----------------------
+47. Perceive.
+48. Identify context.
+49. Retrieve evidence.
+50. Understand intent.
+51. Assess risk.
+52. Plan.
+53. Ask when necessary.
+54. Act.
+55. Verify.
+56. Recover.
+57. Record.
+58. Learn.
+59. Treat this as a philosophy/checklist, not a mandatory 12-subsystem pipeline.
+60. Many simple requests may use only a few steps.
+
+G. KNOWLEDGE / MEMORY SEPARATION
+--------------------------------
+61. Conversation context.
+62. Working memory.
+63. Task memory.
+64. Project memory.
+65. Preferences.
+66. Approved long-term memory.
+67. Knowledge.
+68. Corrections.
+69. Entity/relationship state.
+70. Historical/superseded state.
+71. Observation is not retention.
+72. Retrieval is not permission.
+73. Memory should be editable.
+74. Memory should be deletable.
+75. Memory should be scoped.
+76. Factual memory should preferably have evidence.
+77. Secrets should not become automatic memory.
+78. Random screen content should not become automatic memory.
+79. Private information about others should not become automatic memory.
+80. Avoid inferred psychological/political profiles.
+
+H. CORRECTION / LEARNING SYSTEM
+-------------------------------
+81. Corrections may be one-time, temporary, project-specific, global, factual,
+    source-related, model-related, or unresolved disagreement.
+82. Store scope.
+83. Store source.
+84. Store timestamp.
+85. Store confidence where appropriate.
+86. Store evidence.
+87. Support undo.
+88. Support expiration/review.
+89. Learning should improve retrieval, routing, prompting, warnings, tool choice,
+    and workflow.
+90. Do not let learning rewrite security/executable code autonomously.
+91. Detect when a preference is outdated.
+92. Avoid reinforcing false user assumptions.
+
+I. "FADING APPRENTICE" / SKILL-GROWTH MODE
+-------------------------------------------
+93. Nexus should sometimes make the user MORE capable rather than more dependent.
+94. Help levels can fade as the user masters a topic.
+95. Full explanation → hints → questions → user attempt → verification.
+96. Run occasional unaided checks.
+97. Track recurring mistakes.
+98. Suggest practice based on actual weaknesses.
+99. Maintain user agency.
+100. Make user skill growth a possible success metric.
+101. This can be especially valuable for university/learning workflows.
+
+J. TASK / ACTION MODEL
+----------------------
+102. Goal → Project → Task → Plan → Action → Result → Verification.
+103. Task states.
+104. Priority.
+105. Deadline.
+106. Dependencies.
+107. Expected result.
+108. Approval state.
+109. Actual result.
+110. Failure state.
+111. Recovery state.
+112. Next action.
+113. Not every request needs the full lifecycle.
+
+K. DETERMINISTIC POLICY
+-----------------------
+114. Keep safety/security decisions deterministic where possible.
+115. Permissions should not depend entirely on LLM judgment.
+116. Data-routing rules should be deterministic.
+117. Destructive-action confirmation should be deterministic.
+118. Secrets handling should be deterministic.
+119. Audit integrity should be deterministic.
+120. Verification primitives should be deterministic.
+121. AI can propose an action, but policy decides whether it is allowed.
+122. Risk-aware friction should be bounded and explainable.
+
+L. INTELLIGENT FRICTION
+-----------------------
+123. Low-risk action → quiet.
+124. Moderate-risk action → preview/warning when useful.
+125. High-risk → explicit approval.
+126. Ambiguous/unusual → one focused question.
+127. Irreversible/high-impact → explicit confirmation and recovery where possible.
+128. Repeated safe actions may eventually reduce friction under explicit policy.
+129. Do not ask for confirmation constantly.
+130. User history may influence convenience, but cannot silently bypass high-impact
+     rules.
+
+M. LEASED AUTHORITY
+-------------------
+131. Authority can be granted narrowly for a specific task and time window.
+132. Example: "organize these 30 files today, copy only, do not move."
+133. Permissions expire.
+134. Nexus should not silently expand its own authority.
+135. Initiative can grow through user-approved leases rather than autonomous
+     self-authorization.
+
+N. VOICE
+---------
+136. Voice is an interface to Nexus, not a separate brain.
+137. STT.
+138. TTS.
+139. Natural conversation.
+140. Barge-in/interruption.
+141. Push-to-talk/wake word where appropriate.
+142. Speech input, speaker identification, and authorization are separate.
+143. Speaker ID can personalize but should not be sole high-impact authentication.
+144. Voice state should drive visual UI state.
+145. Voice should connect to the same session/context/task engine.
+
+O. VISION / PERCEPTION
+----------------------
+146. Text perception.
+147. Image perception.
+148. Screen perception.
+149. Camera perception.
+150. Browser perception.
+151. Device/system signals.
+152. Event-driven perception.
+153. Explicit screenshot mode.
+154. User-consented continuous perception where justified.
+155. Emergency disable.
+156. Active indicator.
+157. Retention policy.
+158. Data classification.
+159. Local/cloud routing policy.
+160. Avoid secret surveillance by default.
+
+P. FACE / SPEAKER IDENTITY
+--------------------------
+161. Face recognition can be a personalization signal.
+162. Speaker recognition can be an identity signal.
+163. Identity should be separated from authorization.
+164. Use user-approved identity sources.
+165. Avoid relying on scraped social media images as the default identity source.
+166. Stronger authentication required for sensitive actions.
+167. Protect biometric/identity data carefully.
+168. Handle replay/cloning/spoofing risks.
+
+Q. TOOLS / CAPABILITIES
+-----------------------
+169. Every capability/tool should declare:
+    - stable ID
+    - purpose
+    - input schema
+    - output schema
+    - side effects
+    - data accessed
+    - network use
+    - risk level
+    - reversibility
+    - expected result
+    - verification method
+    - failure behavior
+170. Capabilities should be discoverable.
+171. Capabilities should be modular.
+172. Capabilities should not directly depend on each other unnecessarily.
+173. Core coordinates capabilities.
+174. Tool output is untrusted.
+175. External content may contain prompt injection.
+176. Avoid unrestricted shell by default.
+177. Structured tool calls preferred.
+
+R. PC CONTROL
+-------------
+178. Controlled PC capabilities.
+179. Read screen.
+180. Click controls.
+181. Type text.
+182. Launch apps.
+183. File operations.
+184. System actions.
+185. Expected outcome.
+186. Postcondition verification.
+187. Risk classification.
+188. Approval where necessary.
+189. Rollback where possible.
+190. Safe mode.
+191. Narrow tool scopes.
+192. Potential future escape hatch only under explicit safeguards.
+
+S. BROWSER CONTROL
+------------------
+193. Browser research.
+194. Navigation.
+195. Forms.
+196. University portals.
+197. Online services.
+198. Structured browser tools.
+199. Browser actions verified.
+200. Approval for high-impact external actions.
+201. Treat webpages as untrusted.
+202. Resist prompt injection from websites.
+
+T. COMMUNICATIONS
+-----------------
+203. Email.
+204. WhatsApp.
+205. Messaging.
+206. Drafting.
+207. Summarization.
+208. Reply preparation.
+209. Sending under approval.
+210. Correct-recipient verification.
+211. Public posting under strict approval.
+212. Communication history/context.
+213. Potential outbound calls/reporting to the user.
+214. Prefer explicit confirmation for consequential external messages.
+
+U. CALENDAR / BOOKINGS / RESERVATIONS
+-------------------------------------
+215. Calendar.
+216. Events.
+217. Reminders.
+218. Scheduling.
+219. Appointment booking.
+220. Restaurant reservation.
+221. Travel/other booking workflows.
+222. Conflict detection.
+223. Confirm critical details before booking.
+224. Verify booking actually exists.
+
+V. KNOWLEDGE / SEARCH / EVIDENCE
+-------------------------------
+225. Search user files.
+226. Search academic notes.
+227. Search PDFs.
+228. Search images/handwritten material.
+229. Lexical search.
+230. Semantic search later.
+231. Source-linked answers.
+232. Page/file citations.
+233. Evidence panel.
+234. Freshness/staleness handling.
+235. Source version tracking.
+236. Refuse or qualify answers when evidence is insufficient.
+237. Disposable search indexes; source files remain canonical.
+
+W. PROVENANCE / RECEIPTS
+------------------------
+238. Source identity.
+239. Content hash.
+240. Processing configuration identity.
+241. Model/provider record.
+242. Transformation record.
+243. Timestamp.
+244. Verification state.
+245. Confidence.
+246. Supersession.
+247. "Why do you believe this?"
+248. "Where did this come from?"
+249. Action receipts.
+250. Preserve original data.
+251. Recovery history.
+
+X. PROVIDER / MODEL STRATEGY
+----------------------------
+252. Provider-agnostic Model Gateway.
+253. Gemini adapter.
+254. Local provider(s).
+255. Other optional providers.
+256. Provider replacement.
+257. Task-specific model selection.
+258. Local-first routing for sensitive data.
+259. Free-first baseline.
+260. Optional paid upgrades.
+261. Graceful degradation.
+262. Offline mode.
+263. Provider fallback.
+264. Model quality/resource/cost tradeoff selection.
+
+Y. CONTEXT BROKER / PORTABLE CONTEXT
+------------------------------------
+265. Build context packages/briefs for models/tools.
+266. Provider-independent context representation.
+267. Reuse context across AI providers.
+268. Carry user preferences.
+269. Carry project/task constraints.
+270. Carry relevant evidence.
+271. Carry past decisions.
+272. Carry accepted/rejected results.
+273. Debrief outcomes back into the vault/state.
+
+Z. PERSONAL VAULT / SYSTEM OF RECORD
+------------------------------------
+274. Plain-file or transparent source-of-truth storage.
+275. Stable IDs for important objects.
+276. Versioned files.
+277. User-owned data.
+278. Deletable/editable memory.
+279. No proprietary lock-in to the core data model.
+280. Track what exists.
+281. Track what changed.
+282. Track what was superseded.
+283. Keep raw originals.
+284. Keep derived outputs separate.
+
+AA. ACTION VERIFICATION
+-----------------------
+285. Expected result defined before action when practical.
+286. Execute.
+287. Inspect postcondition.
+288. Compare expected vs actual.
+289. Report partial success separately.
+290. Do not claim success based only on tool-return status.
+291. Retry only when safe.
+292. Avoid duplicate execution after uncertain failure.
+293. Recover when possible.
+294. Cancel when appropriate.
+295. Detect stale plans.
+
+AB. PROACTIVITY
+---------------
+296. Duplicate warnings.
+297. Deadline conflicts.
+298. Missing requirements.
+299. Unfinished tasks.
+300. Stale information.
+301. Repeated mistake patterns.
+302. Repeated Nexus mistakes.
+303. Explicit watches.
+304. Weekly digest.
+305. Urgency levels.
+306. Quiet hours.
+307. Notification budget.
+308. Snooze.
+309. Dismiss.
+310. Pause.
+311. Explain why a suggestion appeared.
+312. Proactivity should be bounded and interruptible.
+
+AC. JARVIS / FRIDAY / ULTRON EXPERIENCE
+----------------------------------------
+313. Cinematic personal AI environment.
+314. Central Nexus Core.
+315. Animated orb/core.
+316. Orbital geometry.
+317. HUD.
+318. Ambient particles.
+319. Technical lines.
+320. Light/bloom.
+321. Audio-reactive visuals.
+322. State-reactive visuals.
+323. Immersive modes.
+324. Conversation environment.
+325. Task environment.
+326. Research/evidence environment.
+327. Vision environment.
+328. PC-control environment.
+329. Voice environment.
+330. Smooth transitions.
+331. Contextual panels.
+332. Premium typography.
+333. Spatial depth.
+334. Modern usability.
+335. Original Nexus identity, not movie copy.
+336. Truthful animation tied to actual system state.
+337. Reduced-motion mode.
+338. High-end effects without unusable clutter.
+
+AD. JARVIS VISUAL STATE MODEL
+-----------------------------
+339. IDLE.
+340. LISTENING.
+341. PROCESSING.
+342. RESPONDING.
+343. EXECUTING.
+344. VERIFYING.
+345. SUCCESS.
+346. WARNING.
+347. ERROR.
+348. RECOVERY.
+349. Visual state should be driven by real state where possible.
+350. No fake "AI thinking" animation when nothing is happening.
+
+AE. GUI / FRONTEND ARCHITECTURE
+-------------------------------
+351. UI should be presentation only.
+352. Backend/Core is source of truth.
+353. Future React/Web UI.
+354. Possible desktop UI.
+355. Possible mobile UI.
+356. All interfaces call the same Nexus brain.
+357. Clean API between frontend and backend.
+358. No duplicated business logic in TypeScript.
+359. UI can be rebuilt without changing the brain.
+360. UI should expose context, tasks, evidence, approvals, recovery, system state.
+
+AF. MODE / WORKSPACE SYSTEM
+---------------------------
+361. Conversation mode.
+362. Task mode.
+363. Activity mode.
+364. Evidence mode.
+365. System mode.
+366. Voice mode.
+367. Vision mode.
+368. PC-control mode.
+369. Research mode.
+370. Dynamic layouts depending on active mode.
+371. Secondary information can appear contextually rather than always.
+
+AG. TRUST UI
+------------
+372. Clearly show what Nexus knows.
+373. Clearly show inference vs evidence.
+374. Show source.
+375. Show verification.
+376. Show task status.
+377. Show approval state.
+378. Show recovery state.
+379. Show privacy/data-routing state.
+380. Show capability availability.
+381. Avoid misleading UI.
+382. Show honest limitations.
+
+AH. PRIVACY MODES / DATA ROUTING
+--------------------------------
+383. Normal mode.
+384. Presentation mode.
+385. Ghost/quiet mode.
+386. Lockdown mode.
+387. Local-only mode.
+388. Data classification.
+389. Sensitive/private/public classification.
+390. Local/cloud routing policy.
+391. Network disable for lockdown.
+392. External communication disable.
+393. Screen/camera restrictions.
+394. Memory/retention restrictions.
+
+AI. SECURITY
+------------
+395. User identity.
+396. Session authentication.
+397. Trusted/unknown users.
+398. Action-level permissions.
+399. Capability authorization.
+400. High-impact approval.
+401. Secrets outside normal config.
+402. Credential protection.
+403. Emergency stop.
+404. Lockdown/safe mode.
+405. Audit log.
+406. Recovery.
+407. Prompt-injection defense.
+408. Supply-chain/plugin trust.
+409. No voice-only security for dangerous actions.
+410. Security should not depend solely on model intelligence.
+
+AJ. LEASED / TEMPORARY AUTONOMY
+-------------------------------
+411. Narrow task-specific authorization.
+412. Time-bounded permissions.
+413. Scope-bounded permissions.
+414. Explicit data access boundaries.
+415. Automatic expiry.
+416. User can revoke.
+417. Renewal requires user decision for sensitive scopes.
+
+AK. SELF-IMPROVEMENT / CORRIGIBILITY
+------------------------------------
+418. Improve through corrections and feedback.
+419. Improve routing.
+420. Improve retrieval.
+421. Improve warnings.
+422. Improve tool selection.
+423. Improve workflows.
+424. Improve personalization.
+425. Do not silently rewrite executable security.
+426. Do not autonomously expand permissions.
+427. Keep user override.
+428. Keep delete/reset controls.
+429. Keep reversible learning where practical.
+
+AL. HEALTHY HUMAN-AI RELATIONSHIP
+---------------------------------
+430. Honest disagreement.
+431. Can say "I don't know."
+432. Can say "I think you're wrong."
+433. Strongest counter-argument once, then obey user override where safe.
+434. Avoid manipulation.
+435. Do not personalize persuasion.
+436. Personalize helpful context/preferences.
+437. Avoid emotional dependency.
+438. Periodic independence/skill checks.
+439. Preserve user agency.
+440. User remains final authority for high-impact decisions.
+
+AM. "FADING APPRENTICE" / LEARNING MODE
+---------------------------------------
+441. Deliberately reduce help when the user masters something.
+442. Hints before answers.
+443. Questions before hints.
+444. Unaided checks.
+445. Mistake-based practice.
+446. Skill ledger.
+447. Track growth over time.
+448. Adjust help level by demonstrated mastery.
+449. Useful for academic work and skill development.
+450. Success metric can include user becoming less dependent.
+
+AN. "SYSTEM OF RECORD / TRUSTED STATE"
+--------------------------------------
+451. Track what exists.
+452. Track where it came from.
+453. Track whether processed.
+454. Track version/state.
+455. Track whether an action completed.
+456. Track why something is trusted.
+457. Track what is superseded.
+458. Track failure/recovery.
+459. Provide receipts.
+460. Preserve raw sources.
+
+AO. EXTERNAL TOOL ORCHESTRATION
+-------------------------------
+461. Nexus does not need to rebuild every specialist.
+462. Use best external tools where appropriate.
+463. Route tasks to specialized providers/capabilities.
+464. Preserve user's context while changing tools/providers.
+465. Bring results back into Nexus.
+466. Verify external outcomes.
+467. Maintain portable context.
+468. Avoid vendor lock-in.
+469. Use adapters instead of replacing everything.
+
+AP. "BRIEF → ACT → DEBRIEF" LOOP
+--------------------------------
+470. Build a context brief.
+471. Send to model/tool/capability.
+472. Execute.
+473. Verify.
+474. Build a debrief.
+475. Store accepted/rejected outcome.
+476. Update relevant user/project/task context.
+477. Maintain receipts.
+
+AQ. GENERAL PURPOSE ORCHESTRATOR
+--------------------------------
+478. One interface for many capabilities.
+479. Capability routing.
+480. Tool routing.
+481. Provider routing.
+482. Context selection.
+483. Permission routing.
+484. Verification routing.
+485. Recovery routing.
+486. User-facing explanation.
+487. Shared session/context across domains.
+
+AR. SPECIALIZED ASSISTANT ROLES (OPTIONAL)
+------------------------------------------
+488. Study assistant mode.
+489. Research assistant mode.
+490. Coding assistant mode.
+491. Career assistant mode.
+492. Communication assistant mode.
+493. Travel/booking assistant mode.
+494. Creative assistant mode.
+495. Gaming assistant mode.
+496. PC operations mode.
+497. Personal organization mode.
+498. These are modes/capability bundles, not separate brains.
+
+AS. ADVANCED PERCEPTION / INTERACTION IDEAS
+-------------------------------------------
+499. Hand tracking.
+500. Gesture-based commands.
+501. Face recognition.
+502. Voice biometrics as a non-authoritative signal.
+503. Eye/attention awareness only if justified.
+504. Spatial UI.
+505. Context-aware device input.
+506. Future wearables.
+507. AR interface.
+508. Advanced camera interactions.
+509. Environmental awareness.
+510. Keep privacy/consent requirements high.
+
+AT. GAMING / CREATIVE SPECIALIZATION
+------------------------------------
+511. Gaming assistant.
+512. Game strategy guidance.
+513. Performance optimization.
+514. Capture/summarize gaming sessions.
+515. Graphics assistant.
+516. Design assistant.
+517. Video editing assistant.
+518. Content organization.
+519. Image/video workflows.
+520. Optional integrations with specialist creative software.
+
+AU. COMMUNICATION / OUTBOUND ACTIONS
+-----------------------------------
+521. Send emails.
+522. Message people.
+523. WhatsApp messages.
+524. WhatsApp calls.
+525. Call/report to user.
+526. Draft and schedule communications.
+527. Correct-recipient verification.
+528. Approval before external send where high impact.
+529. Track actual send outcome.
+530. Detect failed delivery when possible.
+
+AV. BOOKINGS / APPOINTMENTS
+---------------------------
+531. Restaurant reservation.
+532. Travel booking.
+533. Appointment booking.
+534. Calendar coordination.
+535. Confirm date/time/person/location.
+536. Verify booking exists.
+537. Handle cancellation/modification carefully.
+538. Approval on financial or commitment steps.
+
+AW. DEVICE / HOME CONTROL
+-------------------------
+539. Smart-home device management.
+540. Device status.
+541. Routines.
+542. Scene control.
+543. Safety checks.
+544. Local-first home control where possible.
+545. Emergency disable.
+
+AX. MOBILE CONTINUITY
+---------------------
+546. iPhone companion.
+547. Mobile notifications.
+548. Capture from phone.
+549. Voice interaction on phone.
+550. Cross-device context.
+551. Two-SIM awareness.
+552. Remote interaction.
+553. Future mobile app.
+554. Phone as secure confirmation device.
+
+AY. FUTURE RESEARCH / SCIENCE / EXPERIMENTAL
+--------------------------------------------
+555. Advanced multimodal models.
+556. Wearables.
+557. AR.
+558. Robotics.
+559. Home robotics.
+560. Advanced environmental perception.
+561. Future hardware adapters.
+562. More capable local models.
+563. Specialized AI tools.
+564. Experimental agent behaviors with strict sandboxing.
+
+============================================================
+PART IV — POSSIBLE FUTURE IDEAS TO CONSIDER
+============================================================
+
+These are additional ideas that naturally follow from the combined Nexus
+concept. They are NOT commitments.
+
+1. Personal "Context Passport" — a portable, user-owned context package that can
+   be safely shared with selected models/tools.
+2. Action Receipt Viewer — a timeline of intended action vs actual verified result.
+3. Trust Dashboard — what Nexus knows / inferred / verified / is uncertain about.
+4. Capability Marketplace (private/local only, trust-controlled) — future idea,
+   not current recommendation.
+5. Tool Reputation System — track reliability of tools/providers over time.
+6. Provider Scorecard — compare providers on quality, privacy, latency, cost.
+7. Automatic provider selection based on task requirements.
+8. Local-first privacy router.
+9. Context compression layer for long-running projects.
+10. Project handoff packets for switching providers.
+11. "Explain why you asked me" interaction.
+12. "What changed?" summaries.
+13. "What do you need from me?" task clarification.
+14. "Resume where we left off" project continuity.
+15. "Undo last safe action" for reversible workflows.
+16. "Dry run" mode before external/destructive actions.
+17. "Preview changes" mode.
+18. Safe sandbox environment for risky tool operations.
+19. Time-bounded capability leases.
+20. User-defined "never do this" rules.
+21. User-defined "always ask me before X" rules.
+22. User-defined "never send Y to cloud" rules.
+23. Personal workflow recorder: learn a routine from explicit demonstration.
+24. Workflow template generator.
+25. Reusable approved routines.
+26. Routine health monitor: detect when a workflow breaks.
+27. Personal data freshness monitor.
+28. Expiration/review prompts for old preferences.
+29. Source conflict resolver.
+30. Evidence quality scoring.
+31. Citation completeness checker.
+32. Answer-to-source trace viewer.
+33. Change diff for remembered facts/preferences.
+34. Memory audit screen.
+35. Memory "forget this" controls.
+36. Temporary private session mode.
+37. One-click privacy panic button.
+38. Session export/import.
+39. Project archive/export.
+40. Offline emergency mode.
+41. Read-only safe mode.
+42. Demo/presentation mode that suppresses private notifications.
+43. Child/guest/unknown-user safety mode if ever needed.
+44. "What can you currently do?" capability introspection.
+45. "Why can't you do X?" capability explanation.
+46. "What would it take to enable X?" planning.
+47. Skill/knowledge gap detector for the user.
+48. Exam-mode / study-mode.
+49. Focus-mode / distraction guard.
+50. Digital declutter assistant.
+51. Duplicate-download cleaner with preview.
+52. File naming assistant.
+53. Project folder organization assistant.
+54. Backup health monitoring.
+55. Restore/recovery assistant.
+56. Personal changelog / life-of-project timeline.
+57. Career evidence archive.
+58. Portfolio story generator based on verified project history.
+59. Interview evidence retrieval.
+60. Internship/freelance opportunity tracking.
+61. Academic deadline conflict detector.
+62. Course workload balancer.
+63. Study-energy planning without claiming psychological diagnosis.
+64. "Explain this like my professor does" style profiles based on explicit preference.
+65. Multi-language interaction if useful.
+66. Urdu/English mixed UI or interaction mode if useful.
+67. Accessibility-first voice navigation.
+68. Screen reader-aware Nexus.
+69. Hands-free mode.
+70. Quiet mode with text-only responses.
+71. Local voice trigger.
+72. Custom Nexus voice/persona.
+73. Multiple personas/modes for different tasks, with same underlying system.
+74. Visual theme system while keeping a stable Nexus identity.
+75. User-created custom skills/capabilities under review.
+76. Capability simulator/dry-run environment.
+77. Automated regression suite from real user tasks.
+78. "Known failure patterns" database.
+79. Nexus self-audit report.
+80. Periodic architecture/health check.
+81. Usage/value dashboard focused on outcomes, not feature count.
+82. Maintenance budget monitor.
+83. Cloud-cost monitor.
+84. Latency monitor.
+85. Provider outage fallback system.
+86. Graceful degraded mode.
+87. Capability dependency graph.
+88. Tool health check.
+89. External-service change detector.
+90. "Replace this provider" migration helper.
+91. Portable Nexus export format.
+92. Long-term archival format.
+93. Versioned personal context.
+94. Cross-project relationship map where justified.
+95. Timeline of important decisions and why they were made.
+96. "Why did I decide this?" retrieval.
+97. "What changed since last time?" summary.
+98. "What am I forgetting?" checklist.
+99. "What did I say I'd do?" retrieval.
+100. "What did I already try?" retrieval.
+101. "What is still unresolved?" dashboard.
+102. "What can Nexus handle for me?" smart routing.
+103. "What should I do myself?" apprenticeship guidance.
+104. Deliberate independence mode.
+105. User-set autonomy levels.
+106. Per-capability autonomy settings.
+107. Per-contact communication permissions.
+108. Per-site browser permissions.
+109. Per-folder file permissions.
+110. Per-app permissions.
+111. Per-data-class cloud routing.
+112. Temporary access tokens/leases for capabilities.
+113. Emergency capability kill switch.
+114. Capability sandbox.
+115. Tool argument validation.
+116. Output schema validation.
+117. Postcondition verification framework.
+118. Recovery planner.
+119. Failure explanation framework.
+120. Human override at every consequential stage.
+
+============================================================
+PART V — IDEAS TO KEEP AS LONG-TERM NORTH-STAR PRINCIPLES
+============================================================
+
+1. Broad personal AI ambition.
+2. Personal context as a major source of value.
+3. Capabilities rather than one-off scripts.
+4. Model/provider independence.
+5. Free-first baseline.
+6. Local-first/privacy-aware routing.
+7. Human-error reduction.
+8. Verification.
+9. Evidence/provenance.
+10. Recoverability.
+11. Scoped memory.
+12. Observation ≠ retention.
+13. Retrieval ≠ permission.
+14. Model output ≠ verified state.
+15. Tool success ≠ task success.
+16. Deterministic security boundaries.
+17. Risk-based friction.
+18. User remains in control.
+19. No silent expansion of autonomy.
+20. No autonomous self-modification of security.
+21. Modular expansion.
+22. One Nexus brain, many interfaces.
+23. Voice/vision/PC/browser as capabilities/interfaces, not separate brains.
+24. JARVIS/FRIDAY-inspired experience with original Nexus identity.
+25. UI states should reflect truthful system state.
+26. Preserve raw user data.
+27. Keep external content untrusted.
+28. Learn from corrections.
+29. Preserve user agency and skill growth.
+30. Build actual usefulness before endlessly expanding infrastructure.
+
+============================================================
+PART VI — FEATURE PRIORITY LABELS (TO DECIDE LATER)
+============================================================
+
+Potential BUILD NOW:
+- Conversation/session
+- Context briefing/debrief
+- Knowledge/search over user's files
+- Evidence/citations
+- Trusted state/receipts
+- Duplicate/version detection
+- Verification primitives
+- Small corrections/preferences system
+
+Potential BUILD NEXT:
+- Local provider
+- Quizzes/study
+- Tasks/goals
+- TTS
+- STT
+- Voice conversation
+- Mobile capture
+- Basic proactivity/digest
+
+Potential BUILD LATER:
+- Speaker identification
+- Vision
+- Browser control
+- PC control
+- Communications
+- Calendar
+- Bookings
+- Home control
+- Advanced creative tools
+
+Potential EXPERIMENTAL:
+- Hand gestures
+- Face recognition
+- Wearables
+- AR
+- Robotics
+- Advanced gaming control
+- Ambient perception
+
+Potential EXTERNAL-TOOL-FIRST:
+- Video editing
+- High-end graphics
+- Specialized browser agents
+- Specialized creative generation
+- Some communication services
+- Heavy perception workloads
+
+Potential PERMANENTLY RESTRICTED / HIGH-SAFETY:
+- Unrestricted shell by default
+- Voice-only authorization for high-impact actions
+- Silent destructive operations
+- Autonomous money movement
+- Unapproved communications
+- Hidden surveillance
+- Secret retention
+- Autonomous self-modification of security/permissions
+
+============================================================
+PART VII — DEVELOPMENT / TEAM MODEL
+============================================================
+
+Roles:
+
+USER / RAI:
+- product owner
+- final preference/vision authority
+- approves important scope decisions
+
+CHATGPT:
+- synthesis
+- architecture
+- prompt engineering
+- decision support
+- independent challenge of AI outputs
+- coordinates AI roles
+
+CLAUDE:
+- adversarial product/design reviewer
+- idea generator
+- alternative concepts
+- human-AI relationship critic
+- long-term strategist
+- NOT automatically authoritative
+
+GOOGLE AI STUDIO:
+- main builder/implementation environment
+- backend/core/capability development
+- integration and tests
+
+V0 / FRONTEND TOOLS:
+- frontend exploration and visual implementation when appropriate
+- not source of truth for backend behavior
+
+GITHUB COPILOT:
+- final engineering audit
+- security/reliability/performance/edge-case review
+- final integration cleanup
+- use remaining credits near the end where they provide maximum value
+
+============================================================
+END OF NEXUS MASTER IDEA VAULT
+============================================================
+
+Next use:
+1. Preserve this file.
+2. Do NOT treat it as a build order.
+3. Periodically review it.
+4. Mark ideas KEEP / MODIFY / DELAY / CUT.
+5. Build from a separate roadmap so the vault remains comprehensive.
