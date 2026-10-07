@@ -205,3 +205,70 @@ def launch_process_notes(configuration=None, root=None):
             error
         )
         return False
+
+
+# Conversation & Command Core Coordination
+_conversation_engine = None
+
+
+def get_conversation_engine(
+    gateway=None,
+    session_store=None,
+    retry_policy=None,
+    reload=False,
+):
+    global _conversation_engine
+
+    if _conversation_engine is None or reload:
+        from app.conversation.engine import ConversationEngine, RetryPolicy
+        from app.conversation.session import SessionStore
+        from app.models.gateway import create_gateway
+
+        active_gateway = gateway if gateway is not None else create_gateway(config)
+        active_store = session_store if session_store is not None else SessionStore()
+        active_policy = retry_policy if retry_policy is not None else RetryPolicy()
+
+        _conversation_engine = ConversationEngine(
+            gateway=active_gateway,
+            session_store=active_store,
+            retry_policy=active_policy,
+        )
+
+    return _conversation_engine
+
+
+def execute_command(command, engine=None):
+    active_engine = engine if engine is not None else get_conversation_engine()
+    return active_engine.execute_command(command)
+
+
+def send_chat_message(
+    text,
+    session_id=None,
+    preferences=None,
+    constraints=None,
+    evidence=None,
+    engine=None,
+):
+    from app.conversation.commands import CommandIntent, NexusCommand
+
+    command = NexusCommand(
+        text=text,
+        session_id=session_id,
+        intent=CommandIntent.CONVERSATION,
+        preferences=preferences or {},
+        constraints=tuple(constraints or ()),
+        evidence=tuple(evidence or ()),
+    )
+    return execute_command(command, engine=engine)
+
+
+def get_session_store(engine=None):
+    active_engine = engine if engine is not None else get_conversation_engine()
+    return active_engine.session_store
+
+
+def reset_session(session_id, engine=None):
+    store = get_session_store(engine=engine)
+    session = store.reset_session(session_id)
+    return session is not None
